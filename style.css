@@ -27,31 +27,18 @@ button {
 
 .container {
   width: 50%;
-  height: auto;
-  background-color: bisque;
-  border: 2px solid black;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .slider {
   width: 100%;
-  height: 100%;
   display: flex;
+  justify-content: start;
 }
 
 img {
   width: 100%;
-}
-
-.item1 {
-  background-color: yellow;
-}
-.item2 {
-  background-color: blue;
-}
-.item3 {
-  background-color: red;
-}
-.item4 {
-  background-color: rebeccapurple;
+  height: auto;
+  max-width: 2000px;
+  max-height: 1335px;
 }
