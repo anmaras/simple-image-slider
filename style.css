@@ -11,17 +11,47 @@ body {
   align-items: center;
 }
 
+button {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+.btn-left {
+  left: 5%;
+}
+
+.btn-right {
+  right: 5%;
+}
+
 .container {
-  width: 100%;
-  height: 20vh;
-  display: flex;
+  width: 50%;
+  height: auto;
   background-color: bisque;
+  border: 2px solid black;
+  /* overflow: hidden; */
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+img {
+  width: 100%;
 }
 
 .item1 {
-  background-color: aquamarine;
+  background-color: yellow;
 }
-
 .item2 {
-  background-color: blueviolet;
+  background-color: blue;
+}
+.item3 {
+  background-color: red;
+}
+.item4 {
+  background-color: rebeccapurple;
 }
