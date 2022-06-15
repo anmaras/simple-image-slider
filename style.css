@@ -38,20 +38,44 @@ button {
   justify-content: start;
 }
 
-input {
-  width: 20px;
-  height: 20px;
-  top: 6px;
-
-  border: 5px solid #999;
-  right: 1px;
-  z-index: 10;
-  background-color: red;
-}
-
 img {
   width: 100%;
   height: auto;
   max-width: 2000px;
   max-height: 1335px;
+}
+
+.radio-wrapper {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  gap: 2rem;
+  z-index: 10;
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+
+  border: 2px solid rgb(232, 232, 232);
+  right: 1px;
+  z-index: 10;
+  cursor: pointer;
+  transition: 0.5s all linear;
+}
+
+input:checked {
+  border: 8px solid rgb(232, 232, 232);
+  background-color: rgb(232, 232, 232);
+}
+
+input:hover {
+  /* background-color: aliceblue; */
 }

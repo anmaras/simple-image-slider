@@ -39,6 +39,7 @@ function createRadioMarkUp() {
   const radioBtn = document.createElement("input");
   radioBtn.type = "radio";
   radioBtn.dataset.id = counter++;
+  radioBtn.name = "img";
   return radioWrapper.append(radioBtn);
 }
 
