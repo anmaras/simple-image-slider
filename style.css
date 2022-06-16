@@ -70,12 +70,13 @@ input {
   cursor: pointer;
   transition: 0.5s all linear;
 }
-
+/* 
 input:checked {
   border: 8px solid rgb(232, 232, 232);
   background-color: rgb(232, 232, 232);
-}
+} */
 
-input:hover {
-  /* background-color: aliceblue; */
+.checked {
+  border: 8px solid rgb(232, 232, 232);
+  background-color: rgb(232, 232, 232);
 }
