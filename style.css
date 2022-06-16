@@ -28,7 +28,8 @@ button {
 .container {
   position: relative;
   border-radius: 25px;
-  width: 50%;
+  width: 100%;
+  max-width: 2000px;
   overflow: hidden;
 }
 
@@ -41,8 +42,6 @@ button {
 img {
   width: 100%;
   height: auto;
-  max-width: 2000px;
-  max-height: 1335px;
 }
 
 .radio-wrapper {
