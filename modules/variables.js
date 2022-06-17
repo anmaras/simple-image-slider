@@ -1,6 +1,6 @@
 export const leftButton = document.querySelector(".btn-left");
 export const rightButton = document.querySelector(".btn-right");
-export const arrowBtn = document.querySelectorAll("button");
+export const arrowBtn = document.querySelectorAll("div");
 export const container = document.querySelector(".container");
 export const slider = document.querySelector(".slider");
 export const imgsList = document.querySelectorAll("img");

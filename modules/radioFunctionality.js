@@ -67,4 +67,4 @@ export function moveImgsLeft() {
   timedSliding = setInterval(moveImgsRight, timer);
 }
 
-let timedSliding = setInterval(moveImgsRight, timer);
+// let timedSliding = setInterval(moveImgsRight, timer);
