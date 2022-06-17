@@ -2,7 +2,7 @@ import * as variable from "./variables.js";
 
 let counter = 0;
 let size = variable.img.clientWidth;
-const timer = 5000;
+const timer = 3000;
 
 export function checkRadioFocusPosition(counter) {
   const btn = variable.radioWrapper.childNodes;
@@ -67,4 +67,4 @@ export function moveImgsLeft() {
   timedSliding = setInterval(moveImgsRight, timer);
 }
 
-// let timedSliding = setInterval(moveImgsRight, timer);
+let timedSliding = setInterval(moveImgsRight, timer);
