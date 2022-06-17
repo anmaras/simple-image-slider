@@ -1,8 +1,8 @@
-import * as variable from "./variables.js";
+import * as variable from './variables.js'
 
-let counter = 0;
-let size = variable.img.clientWidth;
-const timer = 3000;
+let counter = 0
+let size = variable.img.clientWidth
+const timer = 3000
 
 // export function checkRadioFocusPosition(counter) {
 //   const btn = variable.radioWrapper.childNodes;
@@ -37,15 +37,15 @@ const timer = 3000;
 // }
 
 export function moveImgsRight() {
-  variable.slider.style.transition = "transform 0.8s ease-in-out";
+  variable.slider.style.transition = 'transform 0.8s ease-in-out'
 
   if (counter > variable.imgsList.length - 2) {
-    counter = -1;
-    variable.slider.style.transform = "translateX(" + -size * counter + "px)";
+    counter = -1
+    variable.slider.style.transform = 'translateX(' + -size * counter + 'px)'
   }
-  counter++;
-  variable.slider.style.transform = "translateX(" + -size * counter + "px)";
-  checkRadioFocusPosition(counter);
+  counter++
+  variable.slider.style.transform = 'translateX(' + -size * counter + 'px)'
+  checkRadioFocusPosition(counter)
   // clearInterval(timedSliding);
 
   // timedSliding = setInterval(moveImgsRight, timer);
@@ -53,13 +53,13 @@ export function moveImgsRight() {
 
 export function moveImgsLeft() {
   if (counter <= 0) {
-    counter = variable.imgsList.length - counter;
-    variable.slider.style.transform = "translateX(" + -size * counter + "px)";
+    counter = variable.imgsList.length - counter
+    variable.slider.style.transform = 'translateX(' + -size * counter + 'px)'
   }
 
-  variable.slider.style.transition = "transform 1s ease-in-out";
-  counter--;
-  variable.slider.style.transform = "translateX(" + -size * counter + "px)";
+  variable.slider.style.transition = 'transform 1s ease-in-out'
+  counter--
+  variable.slider.style.transform = 'translateX(' + -size * counter + 'px)'
 
   // checkRadioFocusPosition(counter);
   // clearInterval(timedSliding);
