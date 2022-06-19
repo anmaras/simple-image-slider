@@ -80,6 +80,9 @@ function showActiveRadioButton() {
   buttons[counter - 1].classList.add('checked');
 }
 
+// eslint-disable-next-line no-use-before-define
+let timedSliding = setInterval(moveSliderRight, timer);
+
 function moveSliderRight() {
   if (counter >= slider.children.length - 1) return;
   counter += 1;
@@ -132,8 +135,6 @@ slider.addEventListener('transitionend', () => {
     slider.style.transform = `translateX(${-size * counter}px)`;
   }
 });
-
-let timedSliding = setInterval(moveSliderRight, timer);
 
 rightButton.addEventListener('click', moveSliderRight);
 
