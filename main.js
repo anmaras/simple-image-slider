@@ -1,17 +1,14 @@
-export const leftButton = document.querySelector('.btn-left');
-export const rightButton = document.querySelector('.btn-right');
-export const container = document.querySelector('.container');
-export const slider = document.querySelector('.slider');
-export const imgsList = document.querySelectorAll('img');
-export const img = document.querySelector('img');
-export const radioWrapper = document.querySelector('.radio-wrapper');
+const leftButton = document.querySelector('.btn-left');
+const rightButton = document.querySelector('.btn-right');
+const slider = document.querySelector('.slider');
+const imgsList = document.querySelectorAll('img');
+const radioWrapper = document.querySelector('.radio-wrapper');
 const timing = 0.5;
 const transFunc = 'ease-in-out';
-const timer = 2000;
+const timer = 10000;
 let counter = 1;
 let radioId = 0;
-
-const size = (() => slider.childNodes[counter].clientWidth)();
+const size = imgsList[0].width;
 
 function defaultSlidePosition() {
   slider.style.transform = `translateX(${-size * counter}px)`;
