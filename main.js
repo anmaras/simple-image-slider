@@ -1,14 +1,16 @@
 const leftButton = document.querySelector('.btn-left');
 const rightButton = document.querySelector('.btn-right');
 const slider = document.querySelector('.slider');
-const imgsList = document.querySelectorAll('img');
+const imgsList = document.querySelectorAll('.slider-imgs');
 const radioWrapper = document.querySelector('.radio-wrapper');
+const spanDate = document.querySelector('.footer-date');
 const timing = 0.5;
 const transFunc = 'ease-in-out';
-const timer = 5000;
+const timer = 2000;
 let counter = 1;
 let radioId = 0;
 const size = imgsList[0].width;
+const date = new Date();
 
 function defaultSlidePosition() {
   slider.style.transform = `translateX(${-size * counter}px)`;
@@ -39,6 +41,7 @@ function resetCounter(radioBtnData) {
 }
 
 function renderRadioMarkUp() {
+  console.log(imgsList);
   imgsList.forEach(createRadioMarkUp);
 }
 
@@ -132,6 +135,8 @@ slider.addEventListener('transitionend', () => {
     slider.style.transform = `translateX(${-size * counter}px)`;
   }
 });
+
+spanDate.textContent = date.getFullYear();
 
 rightButton.addEventListener('click', moveSliderRight);
 

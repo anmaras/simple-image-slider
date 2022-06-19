@@ -1,8 +1,10 @@
 :root {
-  --button-size: 50px;
-  --button-rotation: 45deg;
-  --button-margin: 4rem;
+  --radio-button-size: clamp(10px, 1vw, 20px);
+  --arrow-size: 60px;
+  --arrow-rotation: 45deg;
+  --arrow-margin: 4rem;
   --arrow-color: #f1f4fd;
+  --arrows-size-calc: clamp(20px, 2vw, 100px);
 }
 
 * {
@@ -16,33 +18,39 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(38, 44, 51);
+  background-color: rgb(210, 210, 210);
 }
 
 .container {
   position: relative;
   border-radius: 25px;
-  width: 100%;
+  border: 2px solid rgb(207, 207, 207);
+  width: 85%;
   max-width: 2000px;
+  margin: auto;
   overflow: hidden;
-  box-shadow: 1px 1px 10px 1px rgb(45, 45, 45);
+  box-shadow: 1px 1px 100px rgb(144, 144, 144);
 }
 
 .btn-left,
 .btn-right {
   opacity: 0.5;
   position: absolute;
-  width: var(--button-size);
-  height: var(--button-size);
+
+  width: var(--arrows-size-calc);
+  height: var(--arrows-size-calc);
+
   cursor: pointer;
   z-index: 100;
   top: 0;
   bottom: 0;
   margin-top: auto;
   margin-bottom: auto;
-  transform: rotate(var(--button-rotation));
-  border: 15px solid var(--arrow-color);
-  border-radius: 10px;
+  transform: rotate(var(--arrow-rotation));
+  border-width: clamp(1px, 0.5vw, 5px);
+  border-style: solid;
+  border-radius: clamp(1px, 0.5vw, 5px);
+  border-color: var(--arrow-color);
 
   transition: 0.25s;
   transition-delay: 0.15s;
@@ -53,12 +61,12 @@ body {
   border-top: none;
   border-right: none;
   left: 0;
-  margin-left: var(--button-margin);
+  margin-left: var(--arrow-margin);
 }
 
 .btn-left:hover {
   opacity: 0.8;
-  transform: scale(1.025) translateX(-10px) rotate(var(--button-rotation));
+  transform: translateX(-5px) rotate(var(--arrow-rotation));
 }
 
 .btn-right {
@@ -66,12 +74,12 @@ body {
   border-bottom: none;
 
   right: 0;
-  margin-right: var(--button-margin);
+  margin-right: var(--arrow-margin);
 }
 
 .btn-right:hover {
   opacity: 0.8;
-  transform: translateX(15px) rotate(var(--button-rotation));
+  transform: translateX(5px) rotate(var(--arrow-rotation));
 }
 
 .slider {
@@ -88,10 +96,11 @@ img {
 .radio-wrapper {
   position: absolute;
   bottom: 5%;
+  width: fit-content;
   left: 50%;
   transform: translate(-50%);
   display: flex;
-  gap: 2rem;
+  gap: 1.4rem;
   z-index: 10;
 }
 
@@ -101,10 +110,11 @@ input {
   appearance: none;
 
   border-radius: 50%;
-  width: 17px;
-  height: 17px;
 
-  border: 2px solid rgb(232, 232, 232);
+  width: var(--radio-button-size);
+  height: var(--radio-button-size);
+
+  border: 2px solid rgb(180, 180, 180);
   right: 1px;
   z-index: 10;
   cursor: pointer;
@@ -112,6 +122,22 @@ input {
 }
 
 .checked {
-  border: 8px solid rgb(232, 232, 232);
   background-color: rgb(232, 232, 232);
+}
+
+footer {
+  position: absolute;
+  bottom: 1%;
+  color: black;
+  left: 50%;
+  transform: translate(-50%);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
